@@ -1,0 +1,23 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="/cat3"> <img src="stick_cat.jpg" alt="cat" width="300"></a>
+    <ul>
+        <% if (cat_three){ %>
+        <li class="food">Favorite food: <%= cat_three.fav_food %> </li>
+        <li class="age"> Age: <%= cat_three.age %> </li>
+        <li class="spots">Sleeping spot:
+            <% sleeping_spots.forEach(function(spot){ %>
+            <p> <%= spot %> </p>
+            <% }) %>
+        </li>
+        <% } %>
+    </ul>
+</body>
+
+</html>
