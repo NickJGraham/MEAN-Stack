@@ -1,0 +1,15 @@
+<div id="container">
+  <h1>{{title}}</h1>
+  <div id="btndiv">
+    <button id="taskbtn" (click)="getTasksFromService()">Get All Tasks!</button>
+    <p></p>
+    <div *ngFor="let task of tasks">
+      <p>{{task.title}}<button id="showbtn" (click)="info(task)">SHOW</button></p>
+    </div>
+    <app-task *ngIf="task" [taskToShow]="task"></app-task>
+  </div>
+</div>
+
+
+
+<router-outlet></router-outlet>
