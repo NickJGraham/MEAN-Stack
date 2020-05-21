@@ -7,7 +7,7 @@ import { HttpService } from './http.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  cake = "";
+  cakeToShow;
   cakes = [];
   newCake: any;
   newRating: any;
@@ -45,10 +45,11 @@ export class AppComponent {
     console.log(cakeId);
     let observable = this._httpService.addRating(this.newRating, cakeId);
     observable.subscribe(data => {
-      console.log("Adding a new Rating!")
+      console.log("~Create Comment~");
     })
-    this.newRating = { rating: "", comment: ""}
+    this.newRating = { rating: "", comment: "" }
     this.getCakesFromService();
+
   }
 
   info(idx){

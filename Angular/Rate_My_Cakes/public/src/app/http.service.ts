@@ -17,6 +17,6 @@ export class HttpService {
 
   addRating(newRating, cakeId){
     console.log(newRating);
-    return this._http.post('/ratings/${cakeId}', newRating);
+    return this._http.post(`/ratings/${cakeId}`, newRating);
   }
 }

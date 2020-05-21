@@ -1,0 +1,11 @@
+<div id="component">
+    <h1>Seattle, WA</h1>
+    <div id="details">
+        <h3>Humidity: {{ city.main.humidity }}%</h3>
+        <h3>Temp. (Avg): {{ city.main.temp }}°F</h3>
+        <h3>Temp. (High): {{ city.main.temp_max }}°F</h3>
+        <h3>Temp. (Low): {{ city.main.temp_min }}°F</h3>
+        <h3>Status: {{ city.weather[0].description }}</h3>
+    </div>
+    <img src="https://images.unsplash.com/photo-1502175353174-a7a70e73b362?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="Seattle">
+</div>

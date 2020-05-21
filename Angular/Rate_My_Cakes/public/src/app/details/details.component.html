@@ -4,9 +4,9 @@
 </div>
 <div id="details">
   <h3>Average rating: {{avgRating}}</h3>
-  <div *ngFor="let review of cakesToShow.ratings">
-    <h3>{{review.rating}}</h3>
-    <h3>{{review.comment}}</h3>
+  <div *ngFor="let reviews of cakesToShow.ratings; let idx = index">
+    <h3>{{reviews.rating}}</h3>
+    <h3>{{reviews.comment}}</h3>
   </div>
 
 </div>
