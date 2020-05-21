@@ -10,7 +10,7 @@ import { ActivatedRoute, Router} from '@angular/router'
 export class EditComponent implements OnInit {
 
   author: any;
-  editName: any;
+  editName: any = {};
   error: any;
 
 
@@ -35,13 +35,13 @@ export class EditComponent implements OnInit {
 
   editSubmit(){
     this._route.params.subscribe((params)=>{
-      let observable = this._httpService.editAuthor(params['id']);
+      let observable = this._httpService.editAuthor(params['id'], this.editName);
       observable.subscribe((data:any) => {
         if(data.error){
           this.error = data.error.errors.name.message
         }
         else{
-          console.log("editing");
+          console.log("Edit");
           this._router.navigate(['/home']);
         }
       })

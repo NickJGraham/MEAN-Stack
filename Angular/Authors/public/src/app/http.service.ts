@@ -12,8 +12,8 @@ export class HttpService {
     return this._http.get("/authors");
   }
 
-  getOneAuthor(id:string){
-    return this._http.get("/editAuthor/"+id);
+  getOneAuthor(id){
+    return this._http.get(`/editAuthor/${id}`);
   }
 
   addAuthor(newAuthor){
@@ -21,11 +21,11 @@ export class HttpService {
       return this._http.post('/authors', newAuthor);
   }
 
-  editAuthor(editAuthor){
-    return this._http.put(`/authors/${editAuthor._id}`, editAuthor);
+  editAuthor(id, data){
+    return this._http.put(`/authors/${id}`, data);
   }
 
-  deleteAuthor(author){
-    return this._http.delete(`/delete/${author._id}`, author);
+  deleteAuthor(id){
+    return this._http.delete(`/delete/${id}`);
   }
 }
